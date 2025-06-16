@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dipankar Pal | Power BI Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1a1a1a, #2c3e50);
+      color: #e0e0e0;
+    }
+    nav.nav-buttons {
+  display: flex;
+  justify-content: center;
+  background-color: #1f1f1f;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+    nav.nav-buttons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 18px;
+  background-color: #000;
+  border: 1px solid #1abc9c;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+    nav.nav-buttons a:hover {
+  background-color: #1abc9c;
+  color: #000;
+  transform: scale(1.05);
+}
+ header.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: url("C:\Users\dipan\OneDrive\Desktop\portfolio\wp10207949-data-analyst-wallpapers.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+      
+    
+    header.hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header.hero h2 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      font-weight: 400;
+    }
+    header.hero p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-buttons .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #1abc9c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .hero-buttons .btn:hover {
+      background-color: #16a085;
+      transform: scale(1.05);
+    }
+    section {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeInUp 1s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .skill-grid span {
+      display: inline-block;
+      margin: 10px;
+      padding: 8px 15px;
+      background-color: #000;
+      border-radius: 5px;
+      font-weight: 500;
+      color: #1abc9c;
+    }
+    .project-list, .cert-grid, .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+    .project {
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #000;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .cert img {
+      height: 60px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form input, form textarea {
+      width: 80%;
+      max-width: 500px;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #555;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #1abc9c;
+      color: #e0e0e0;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #16a085;
+    }
+    footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav-buttons">
+<a href="#about"><i class="fas fa-user" style="color:#1abc9c;"></i> About</a>
+  <a href="#skills"><i class="fas fa-tools" style="color:#1abc9c;"></i> Skills</a>
+  <a href="#projects"><i class="fas fa-project-diagram" style="color:#1abc9c;"></i> Projects</a>
+  <a href="#experience"><i class="fas fa-briefcase" style="color:#1abc9c;"></i> Experience</a>
+<a href="#certifications"><i class="fas fa-certificate" style="color:#1abc9c;"></i> Certifications</a>
+  <a href="#resume"><i class="fas fa-file-alt" style="color:#1abc9c;"></i> Resume</a>
+  <a href="#contact"><i class="fas fa-envelope" style="color:#1abc9c;"></i> Contact</a>
+</nav>
+
+<header class="hero">
+  <img src="https://github.com/dipankar-pal.png" alt="Dipankar Pal" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #1abc9c; margin-bottom: 20px;">
+  <h1>Dipankar Pal</h1>
+  <h2>Power BI Developer & Data Analyst</h2>
+  <p>Transforming data into actionable insights</p>
+  <div class="hero-buttons">
+    <a href="resume.pdf" class="btn">View Resume</a>
+    <a href="#projects" class="btn">Projects</a>
+    <a href="#contact" class="btn">Contact Me</a>
+  </div>
+</header>
+
+<section id="about" data-aos="fade-up">
+  <h2><i class="fas fa-user"></i> About Me</h2>
+  <p>I’m a Power BI Developer with a strong focus on transforming complex data into meaningful insights. With hands-on experience in Power BI, DAX, SQL, and Power Query (ETL), I specialize in designing and developing impactful dashboards and reports that support strategic decision-making.
+
+I have worked with a wide range of data sources including SQL Server, PostgreSQL, and SharePoint lists, and I’m skilled at building robust data models that ensure performance and accuracy. I also leverage AI tools like Microsoft Copilot to accelerate development, automate repetitive tasks, and enhance productivity.
+
+I’ve gained practical experience working as a Power BI Developer at Pace Setters Business Solutions Pvt. Ltd., where I developed interactive dashboards and trained others in Power BI tools. Additionally, I completed a Data Analyst internship at Unified Mentor Pvt. Ltd., where I built real-world dashboards, handled large datasets, and extracted key insights to drive business improvements.
+
+What drives me is the opportunity to simplify data complexity and deliver clear, actionable insights that enable smarter business decisions. I'm passionate about making data not only accessible but also visually engaging and aligned with organizational goals.</p>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <div class="badge-base LI-profile-badge" data-aos="fade-up" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="dipankar-analyst" data-version="v1">
+    <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/dipankar-analyst?trk=profile-badge">Dipankar Pal</a>
+  </div>
+</section>
+
+<section id="skills" data-aos="fade-up">
+  <h2><i class="fas fa-tools"></i> Skills</h2>
+  <div class="skill-grid">
+    <span>Power BI Desktop & Service</span>
+    <span>DAX & Time Intelligence</span>
+    <span>Power Query (M Language)</span>
+    <span>Data Modeling (Star/Snowflake)</span>
+    <span>ETL Process & Automation</span>
+    <span>SQL (MySQL, PostgreSQL, SQL Server)</span>
+    <span>Stored Procedures & Views</span>
+    <span>Window Functions & Joins</span>
+    <span>AI Tools (ChatGPT, Gemini, Copilot)</span>
+    <span>Microsoft Excel</span>
+    <span>English Communication</span>
+  </div>
+</section>
+
+<section id="projects" data-aos="fade-up">
+  <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+  <div class="project-list">
+    <div class="project">
+      <h3>US Border Crossing Analysis</h3>
+      <p>Analyzed 28 years (1996–2024) of border traffic data using Power BI. Created visuals to help understand trends by border, year, state, and vehicle type. Designed filters and maps to aid government planning.</p>
+    </div>
+    <div class="project">
+      <h3>Credit Card Transaction Analysis</h3>
+      <p>Processed 56M+ records to identify key customer segments and revenue trends. Developed dashboards with Power BI visuals like tree maps and line graphs to support marketing strategies.</p>
+      <a href="https://github.com/dipankar-pal/credit-card-transaction-report" target="_blank" class="btn">GitHub Repository</a>
+      <a href="https://github.com/dipankar-pal/credit-card-transaction-report/blob/main/credit_card_report.pdf" target="_blank" class="btn">View Report (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience" data-aos="fade-up">
+  <h2><i class="fas fa-briefcase"></i> Experience</h2>
+  <div class="project-list">
+    <div class="project">
+      <h3>Power BI Developer – Pace Setters Business Solutions Pvt. Ltd.</h3>
+      <p><strong>Duration:</strong> May 2023 – Apr 2024</p>
+      <ul style="text-align: left;">
+        <li>Developed and published interactive Power BI dashboards from SQL Server databases.</li>
+        <li>Created data models using star schema, implemented DAX for KPIs and trends.</li>
+        <li>Published and maintained reports on Power BI Service and trained students in BI tools.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Data Analyst Intern – Unified Mentor Pvt Ltd.</h3>
+      <p><strong>Duration:</strong> Feb 2025 – Mar 2025</p>
+      <ul style="text-align: left;">
+        <li>Created real-world dashboards for sales analysis using Power BI and Excel.</li>
+        <li>Cleaned and transformed data using Power Query for reporting.</li>
+        <li>Delivered business insights by presenting slicers, KPIs, and forecasting tools.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="dashboards" data-aos="fade-up">
+    <h2><i class="fas fa-chart-line"></i> Dashboards</h2>
+    <div class="dashboard-gallery">
+      <div class="dashboard-item">
+        <img src="C:\Users\dipan\OneDrive\Desktop\portfolio\flipkart.png" alt="Flipkart Sales Dashboard">
+        <p>Flipkart Sales Analysis Dashboard</p>
+      </div>
+      <div class="dashboard-item">
+        <img src="C:\Users\dipan\OneDrive\Desktop\portfolio\netflix.png" alt="Netflix Dashboard">
+        <p>Netflix show Analytics Dashboard</p>
+      </div>
+      <div class="dashboard-item">
+        <img src="C:\Users\dipan\OneDrive\Desktop\portfolio\spotyfi.png" alt="Spotify Dashboard">
+        <p>Spotify Music Analysis Dashboard</p>
+      </div>
+      <div class="dashboard-item">
+        <img src="C:\Users\dipan\OneDrive\Desktop\portfolio\amazon.png" alt="Amazon Dashboard">
+        <p>Amazon Sales Analysis Dashboard</p>
+      </div>
+      <div class="dashboard-item">
+        <img src="C:\Users\dipan\OneDrive\Desktop\portfolio\creditcard.png" alt="Credit card Dashboard">
+        <p>credit card transaction Analysis Dashboard</p>
+      </div>
+      <div class="dashboard-item">
+        <img src="C:\Users\dipan\OneDrive\Desktop\portfolio\usborder.png" alt="US border crossing Dashboard">
+        <p>US Border Crossing Data Analysis Dashboard</p>
+      </div>
+    </div>
+  </section>
+  
+<section id="certifications" data-aos="fade-up">
+  <h2><i class="fas fa-certificate"></i> Certifications</h2>
+  <ul>
+    <li>Harnessing the Power of Data with Power BI (Microsoft - Coursera)</li>
+    <li>Preparing Data for Analysis with Excel (Microsoft - Coursera)</li>
+    <li>Introduction to Generative AI (Google)</li>
+    <li>Data Analyst Intern - Unified Mentor Pvt Ltd</li>
+  </ul>
+</section>
+
+<section id="resume" data-aos="fade-up">
+  <h2><i class="fas fa-file-alt"></i> Resume</h2>
+  <a href="https://drive.google.com/uc?export=view&id=1MwJh5Pi-FauxUz3TMsaBe5NJIUXP8kcG" class="btn">Download</a>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h2><i class="fas fa-envelope"></i> Contact</h2>
+  <p><i class="fas fa-envelope"></i> Email: <a href="mailto:dippal351@gmail.com">dippal351@gmail.com</a></p>
+  <p><i class="fas fa-phone"></i> Phone: +91 9732504418</p>
+  <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/dipankar-analyst" target="_blank">linkedin.com/in/dipankar-data-analyst</a></p>
+  <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/dipankar-pal" target="_blank">github.com/dipankar-pal</a></p>
+ </section>
+
+<footer>
+  <p>&copy; 2025 Dipankar Pal | All Rights Reserved</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });</script>
+</body>
+</html>
